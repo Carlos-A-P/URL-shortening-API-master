@@ -1,6 +1,6 @@
 # Shortly URL shortening API Challenge
 
-- Live website -(https://cpwd-count-down-timer.netlify.app/)
+- Live website -(https://carlos-a-p.github.io/URL-shortening-API-master/)
 
 ## Table of contents
 
