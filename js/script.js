@@ -1,12 +1,15 @@
 const urlList = document.getElementById('list')
 const formBtn = document.getElementById('form-btn')
-let form = document.getElementById('form')
+const form = document.getElementById('form')
+const loadIcon = document.getElementById('loading-icon')
 
 form.addEventListener('submit', e => {
     //prevent from submitting or else our page will refresh
     e.preventDefault()
     // // get the input value
     const inputVal = document.getElementById('form-input')
+    loadIcon.classList.remove('hidden')
+    setTimeout(() => {
     // // if input value is empty or null add error to form div
     if(inputVal.value == null || inputVal.value === ''){
         form.classList.add('error')
@@ -21,7 +24,11 @@ form.addEventListener('submit', e => {
         //clear input after submit
         inputVal.value = null
         save()
-    })
+    })        
+    loadIcon.classList.add('hidden')
+    }, 1000)
+
+
 })
 
 

@@ -234,6 +234,10 @@ form.error input::placeholder {
 	color: var(--Red);
 }
 
+.loading-icon.hidden {
+	display: none;
+}
+
 .link-card {
 	border-radius: 5px;
 	display: flex;
