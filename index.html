@@ -53,22 +53,22 @@
     </div>
   </section>
   <section class="section-2">
-    <form class="form">
+    <form class="form" id='form'>
       <div class="position-relative input-box">
-        <input type="text" class="input shadow-none" placeholder="Shorten a link here...">
+        <input type="text" id="form-input" class="input shadow-none" onClick="removeErr()" placeholder="Shorten a link here...">
         <span class="position-absolute">Please add a link</span>        
       </div>
-      <button type="submit" class="button my-btn">Shorten It!</button>
+      <button type="submit" form="form" class="button my-btn" id="form-btn">Shorten It!</button>
     </form>
     <div class="list" id="list">
-      <div class="link-card bg-white" data-link-card>
+      <!-- <div class="link-card bg-white" data-link-card>
         <p class="full-link">https://www.frontendmentor.io</p>
         <p class="short-link">https://shrtco.de/k6JEN</p>
         <div class="buttons d-flex">
-          <button class="del" data-delete>Delete</button>
-          <button class="copy my-btn" data-copy>Copy</button>          
+          <button class="del" onCLick="delCard(this)">Delete</button>
+          <button class="copy my-btn" onClick="copyLink(this)">Copy</button>          
         </div>
-      </div>
+      </div> -->
     </div>
   </section>
   <section class="section-3">
