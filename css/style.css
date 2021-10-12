@@ -238,10 +238,6 @@ form.error input::placeholder {
 	display: none;
 }
 
-.hidden {
-	display: none;
-}
-
 .link-card {
 	border-radius: 5px;
 	display: flex;
