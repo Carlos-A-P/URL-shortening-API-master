@@ -73,11 +73,13 @@ function save() {
     localStorage.setItem('url-List', JSON.stringify(elements))
 }
 
+// delete link card
 function delCard(button){
     urlList.removeChild(button.parentElement.parentElement)
     save()
 }
 
+//copy link
 function copyLink(button){
     const shrtLink = button.parentElement.previousElementSibling.innerHTML
     navigator.clipboard.writeText(shrtLink)
