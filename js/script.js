@@ -24,8 +24,9 @@ form.addEventListener('submit', e => {
         //clear input after submit
         inputVal.value = null
         save()
+        loadIcon.classList.add('hidden')
     })        
-    loadIcon.classList.add('hidden')
+    
     }, 1000)
 
 
