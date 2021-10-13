@@ -26,10 +26,7 @@ form.addEventListener('submit', e => {
         save()
         loadIcon.classList.add('hidden')
     })        
-    
     }, 1000)
-
-
 })
 
 
