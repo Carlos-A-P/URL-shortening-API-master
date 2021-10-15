@@ -2,6 +2,7 @@ const urlList = document.getElementById('list')
 const formBtn = document.getElementById('form-btn')
 const form = document.getElementById('form')
 const loadIcon = document.getElementById('loading-icon')
+const errMessage = document.getElementById('error-Message')
 
 form.addEventListener('submit', e => {
     //prevent from submitting or else our page will refresh
@@ -19,11 +20,17 @@ form.addEventListener('submit', e => {
     fetch('https://api.shrtco.de/v2/shorten?url='+inputVal.value)
     .then((result) => result.json())
     .then((data) => {
-        // add child to list
-        addListCard(inputVal.value, data.result.short_link)
-        //clear input after submit
-        inputVal.value = null
-        save()
+        
+        // add child to list if valid
+        if (data.ok === false){
+            form.classList.add('error')
+            errMessage.innerText = 'Link is not valid'
+        } else {
+            addListCard(inputVal.value, data.result.short_link)
+            //clear input after submit
+            inputVal.value = null
+            save()
+        }
         loadIcon.classList.add('hidden')
     })        
     }, 1000)
