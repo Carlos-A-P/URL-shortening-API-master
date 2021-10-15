@@ -260,6 +260,8 @@ form.error input::placeholder {
 
 .full-link {
 	border-bottom: 1px solid rgb(202, 202, 202, 30%);
+	overflow-x: clip;
+	text-overflow: ellipsis;
 }
 
 .link-card button {
@@ -477,7 +479,7 @@ h4 {
 @media (min-width: 992px) {
 	header nav .container-fluid {
 		padding: 0 11.5vw;
-		gap: 10px;
+		gap: 15px;
 	}
 
 	.nav-modal {
@@ -493,7 +495,7 @@ h4 {
 		color: var(--Grayish-Violet);
 		font-size: 15px;
 		font-weight: bold;
-		padding: 15px 0;
+		padding: 10px 0;
 		width: auto;
 
 		margin: 0 auto;
@@ -532,7 +534,7 @@ h4 {
 
 	.section-1 {
 		flex-direction: row-reverse;
-		align-items: center;
+		/* align-items: center; */
 		padding-left: 11.5vw;
 		justify-content: flex-end;
 		margin-top: 78px;
@@ -557,14 +559,15 @@ h4 {
 	}
 
 	.intro-content {
-		width: 564px;
+		/* width: 564px; */
 		text-align: left;
+		padding-top: 5rem;
 		/* padding-left: 168px; */
 	}
 
 	.h1,
 	h1 {
-		font-size: calc(50px + 1vw);
+		font-size: calc(60px + 1vw);
 		margin-bottom: 10px;
 	}
 
@@ -630,6 +633,7 @@ h4 {
 	.full-link {
 		border: none;
 		padding: 0;
+		margin-right: 13px;
 	}
 
 	.short-link {
