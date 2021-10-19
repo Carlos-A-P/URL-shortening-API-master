@@ -9,14 +9,13 @@ form.addEventListener('submit', e => {
     e.preventDefault()
     // // get the input value
     const inputVal = document.getElementById('form-input')
-    loadIcon.classList.remove('hidden')
-    setTimeout(() => {
     // // if input value is empty or null add error to form div
     if(inputVal.value == null || inputVal.value === ''){
         form.classList.add('error')
         return
     }
-
+    loadIcon.classList.remove('hidden')
+    setTimeout(() => {
     fetch('https://api.shrtco.de/v2/shorten?url='+inputVal.value)
     .then((result) => result.json())
     .then((data) => {
@@ -33,7 +32,7 @@ form.addEventListener('submit', e => {
         }
         loadIcon.classList.add('hidden')
     })        
-    }, 1000)
+    }, 500)
 })
 
 
